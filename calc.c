@@ -35,7 +35,7 @@ int main(){
         long f = pow(a,b);
         printf("%ld\n", f);
     }
-    else if(strcmp(c, "/") == 0 || (strcmp(c, "div") == 0))
+    else if(strcmp(c, "/") == 0 || (strcmp(c, "div") == 0) || (strcmp(c, "division") == 0))
     {
         double f = a/b;
         printf("%lf\n", f);
