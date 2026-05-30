@@ -4,3 +4,4 @@ v0.0.2 - added operators (log, pow, sqrt and cbrt)
 v0.0.3 - added combined surgery(log+sum, sqrt+pow, ...)
 v0.0.3_1 - fix bugs and added support for computational operator synonyms(pow - exp, sum-plus)
 v0.0.3_2 - fix bugs again with .exe file(programm was early closed)
+v0.0.3_3 - fix bugs with combined surgery.
