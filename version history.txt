@@ -6,4 +6,4 @@ v0.0.3_1 - fix bugs and added support for computational operator synonyms(pow - 
 v0.0.3_2 - fix bugs again with .exe file(programm was early closed)
 v0.0.3_3 - fix bugs with combined surgery.
 
-//I'm doing a biggest program update..
+//I'm doing a biggest program update...
