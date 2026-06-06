@@ -56,8 +56,14 @@ int calc(){
     }
     else if(strcmp(c, "%") == 0 || strcmp(c, "mod") == 0)
     {
-        long f = a%b;
-        printf("%ld\n", f);
+        if(b!=0){
+    		long f = a%b;
+        	printf("%ld\n", f);
+		}
+		else{
+			printf("err\n");
+        	return 1;
+		}
     }
     else if(strcmp(c, "log") == 0)
     {
@@ -85,11 +91,17 @@ int calc(){
         double f = log(a)/log(b);
         printf("%lf\n", f);
     }
-    else if(strcmp(c, "log+pow") == 0 || (strcmp(c, "log+exp") == 0))
+    else if(strcmp(c, "log+pow") == 0)
     {
         double f = pow(log(a),log(b));
         printf("%lf\n", f);
     }
+    else if(strcmp(c, "log+exp") == 0)
+	{
+    	double f = exp(log(a));
+    	double d = exp(log(b));
+		printf("%lf and %lf", f,d);	
+	}
     else if(strcmp(c, "log10") == 0)
     {
         double f = log10(a);
@@ -123,8 +135,8 @@ int calc(){
     }
     else if(strcmp(c, "log10+exp") == 0)
 	{
-    	double f = exp(a);
-    	double d = exp(b);
+    	double f = exp(log10(a));
+    	double d = exp(log10(b));
 		printf("%lf and %lf", f,d);	
 	}
     else if(strcmp(c, "sqrt") == 0)        
@@ -153,11 +165,17 @@ int calc(){
     	double f = sqrt(a)/sqrt(b);
         printf("%lf\n", f);
     }
-    else if(strcmp(c, "sqrt+pow") == 0 || (strcmp(c, "sqrt+exp") == 0))
+    else if(strcmp(c, "sqrt+pow") == 0)
     {
     	double f = pow(sqrt(a),sqrt(b));
         printf("%lf\n", f);
     }
+    else if(strcmp(c, "sqrt+exp") == 0)
+	{
+    	double f = exp(sqrt(a));
+    	double d = exp(sqrt(b));
+		printf("%lf and %lf", f,d);	
+	}
     else if(strcmp(c, "cbrt") == 0)             
     {                                           
         double f = cbrt(a);
@@ -184,11 +202,17 @@ int calc(){
         double f = cbrt(a)/cbrt(b);
         printf("%lf\n", f);
     }
-    else if(strcmp(c, "cbrt+pow") == 0 || (strcmp(c, "cbrt+exp") == 0))
+    else if(strcmp(c, "cbrt+pow") == 0)
     {
         double f = pow(cbrt(a),cbrt(b));
         printf("%lf\n", f);
     }
+    else if(strcmp(c, "cbrt+exp") == 0)
+	{
+    	double f = exp(cbrt(a));
+    	double d = exp(cbrt(b));
+		printf("%lf and %lf", f,d);	
+	}
     else
     {
         printf("err\n");
@@ -275,11 +299,17 @@ int calcf(){
         double f = log(a)/log(b);
         printf("%lf\n", f);
     }
-    else if(strcmp(c, "log+pow") == 0 || (strcmp(c, "log+exp") == 0))
+    else if(strcmp(c, "log+pow") == 0)
     {
         double f = pow(log(a),log(b));
         printf("%lf\n", f);
     }
+    else if(strcmp(c, "log+exp") == 0)
+	{
+    	double f = exp(log(a));
+    	double d = exp(log(b));
+		printf("%lf and %lf", f,d);	
+	}
     else if(strcmp(c, "log10") == 0)
     {
         double f = log10(a);
@@ -306,11 +336,17 @@ int calcf(){
         double f = log10(a)/log10(b);
         printf("%lf\n", f);
     }
-    else if(strcmp(c, "log10+pow") == 0 || (strcmp(c, "log10+exp") == 0))
+    else if(strcmp(c, "log10+pow") == 0)
     {
         double f = pow(log10(a),log10(b));
         printf("%lf\n", f);
     }
+    else if(strcmp(c, "log10+exp") == 0)
+	{
+    	double f = exp(log10(a));
+    	double d = exp(log10(b));
+		printf("%lf and %lf", f,d);	
+	}
     else if(strcmp(c, "sqrt") == 0)
     {
         double f = sqrt(a);
@@ -337,11 +373,17 @@ int calcf(){
     	double f = sqrt(a)/sqrt(b);
         printf("%lf\n", f);
     }
-    else if(strcmp(c, "sqrt+pow") == 0 || (strcmp(c, "sqrt+exp") == 0))
+    else if(strcmp(c, "sqrt+pow") == 0)
     {
     	double f = pow(sqrt(a),sqrt(b));
         printf("%lf\n", f);
     }
+    else if(strcmp(c, "sqrt+exp") == 0)
+	{
+    	double f = exp(sqrt(a));
+    	double d = exp(sqrt(b));
+		printf("%lf and %lf", f,d);	
+	}
     else if(strcmp(c, "cbrt") == 0)
     {
         double f = cbrt(a);
@@ -369,11 +411,17 @@ int calcf(){
         double f = cbrt(a)/cbrt(b);
         printf("%lf\n", f);
     }
-    else if(strcmp(c, "cbrt+pow") == 0 || (strcmp(c, "cbrt+exp") == 0))
+    else if(strcmp(c, "cbrt+pow") == 0)
     {
         double f = pow(cbrt(a),cbrt(b));
         printf("%lf\n", f);
     }
+    else if(strcmp(c, "cbrt+exp") == 0)
+	{
+    	double f = exp(cbrt(a));
+    	double d = exp(cbrt(b));
+		printf("%lf and %lf", f,d);	
+	}
     else
     {
         printf("err\n");
