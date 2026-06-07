@@ -5,11 +5,8 @@
 
 
 
-
-
-
-
-int calc(){
+int calc()
+{
 	printf("*========================================*\n");
     printf("Instruction:\n");
     printf("1. Write first number\n");
@@ -44,22 +41,26 @@ int calc(){
     }
     else if(strcmp(c, "/") == 0 || (strcmp(c, "div") == 0) || (strcmp(c, "division") == 0))
     {
-    	if(b!=0){
+    	if(b!=0)
+		{
     		double f = (double)a/(double)b;
         	printf("%lf\n", f);
 		}
-		else{
+		else
+		{
 			printf("err\n");
         	return 1;
 		}
     }
     else if(strcmp(c, "%") == 0 || strcmp(c, "mod") == 0)
     {
-        if(b!=0){
+        if(b!=0)
+		{
     		long f = a%b;
         	printf("%ld\n", f);
 		}
-		else{
+		else
+		{
 			printf("err\n");
         	return 1;
 		}
@@ -220,7 +221,8 @@ int calc(){
     return 0;
 }
 
-int calcf(){
+int calcf()
+{
 	printf("*=======================================*\n");
     printf("Instruction:\n");
     printf("1. Write first number\n");
@@ -263,11 +265,13 @@ int calcf(){
     }
     else if(strcmp(c, "/") == 0 || (strcmp(c, "div") == 0) || (strcmp(c, "division") == 0))
     {
-        if(b!=0){
+        if(b!=0)
+		{
     		double f = a/b;
         	printf("%lf\n", f);
 		}
-		else{
+		else
+		{
 			printf("err\n");
         	return 1;
 		}
@@ -352,17 +356,17 @@ int calcf(){
         double g = sqrt(b);
         printf("%lf and %lf\n", f,g);
     }
-    else if(strcmp(c, "sqrt+sum") == 0)
+    else if(strcmp(c, "sqrt+sum") == 0 || strcmp(c, "sqrt+plus") == 0)
     {
         double f = sqrt(a)+sqrt(b);
         printf("%lf\n", f);
     }
-    else if(strcmp(c, "sqrt+min") == 0)
+    else if(strcmp(c, "sqrt+min") == 0 || strcmp(c, "sqrt+minus") == 0)
     {
         double f = sqrt(a)-sqrt(b);
         printf("%lf\n", f);
     }
-    else if(strcmp(c, "sqrt+mul") == 0)
+    else if(strcmp(c, "sqrt+mul") == 0 || strcmp(c, "sqrt+multiple") == 0)
     {
         double f = sqrt(a)*sqrt(b);
         printf("%lf\n", f);
@@ -429,7 +433,8 @@ int calcf(){
     return 0;
 }
 
-int pi(){
+int pi()
+{
 	printf("*======================================*\n");
     printf("Instruction:\n");
     printf("Write the lenth from 0 to 15 decimal points\n");
@@ -439,7 +444,8 @@ int pi(){
     printf("%.*lf\n", a, M_PI);
 }
 
-int clear(){
+int clear()
+{
 	system("cls");
 	printf("+-----------------------+--------------------------------------------------+\n");
     printf("| Instruments           | Description                                      |\n");
@@ -495,7 +501,8 @@ int circle_calc()
 	return 0;
 }
 
-int main(){
+int main()
+{
 	printf("+-----------------------+--------------------------------------------------+\n");
     printf("| Instruments           | Description                                      |\n");
     printf("+-----------------------+--------------------------------------------------+\n");
@@ -507,7 +514,8 @@ int main(){
     printf("| clear                 | Clears the entire console screen                 |\n");
     printf("+-----------------------+--------------------------------------------------+\n");
 	char a[99];
-	while(1){
+	while(1)
+	{
 		printf("> ");
 		scanf("%s", a);
 		if(strcmp(a, "calc") == 0)
