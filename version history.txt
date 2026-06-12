@@ -9,4 +9,4 @@ v1.0.0 - THE RELEASE! four instruments(calc,calcf,pi and circle_calc) and the sy
 v1.0.1 - fix bugs and made pow() and exp() separately
 
 
-//making a new update.
+//making a new update..
