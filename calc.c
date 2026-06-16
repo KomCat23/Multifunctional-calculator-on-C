@@ -102,6 +102,43 @@ int calc()
     	double d = exp(log(b));
 		printf("%lf and %lf", f,d);	
 	}
+	else if(strcmp(c, "log2") == 0)
+    {
+        double f = log2(a);
+        double g = log2(b);
+        printf("%lf and %lf\n", f,g);
+    }
+    else if(strcmp(c, "log2+sum") == 0 || strcmp(c, "log2+plus") == 0)
+    {
+        double f = log2(a)+log2(b);
+        printf("%lf\n", f);
+    }
+    else if(strcmp(c, "log2+min") == 0 || strcmp(c, "log2+minus") == 0)
+    {
+        double f = log2(a)-log2(b);
+        printf("%lf\n", f);
+    }
+    else if(strcmp(c, "log2+mul") == 0 || strcmp(c, "log2+multiple") == 0)
+    {
+        double f = log2(a)*log2(b);
+        printf("%lf\n", f);
+    }
+    else if(strcmp(c, "log2+div") == 0 || strcmp(c, "log2+division") == 0)
+    {
+        double f = log2(a)/log2(b);
+        printf("%lf\n", f);
+    }
+    else if(strcmp(c, "log2+pow") == 0)
+    {
+        double f = pow(log2(a),log2(b));
+        printf("%lf\n", f);
+    }
+    else if(strcmp(c, "log2+exp") == 0)
+	{
+    	double f = exp(log2(a));
+    	double d = exp(log2(b));
+		printf("%lf and %lf", f,d);	
+	}
     else if(strcmp(c, "log10") == 0)
     {
         double f = log10(a);
@@ -313,6 +350,43 @@ int calcf()
     	double d = exp(log(b));
 		printf("%lf and %lf", f,d);	
 	}
+	else if(strcmp(c, "log2") == 0)
+    {
+        double f = log2(a);
+        double g = log2(b);
+        printf("%lf and %lf\n", f,g);
+    }
+    else if(strcmp(c, "log2+sum") == 0 || strcmp(c, "log2+plus") == 0)
+    {
+        double f = log2(a)+log2(b);
+        printf("%lf\n", f);
+    }
+    else if(strcmp(c, "log2+min") == 0 || strcmp(c, "log2+minus") == 0)
+    {
+        double f = log2(a)-log2(b);
+        printf("%lf\n", f);
+    }
+    else if(strcmp(c, "log2+mul") == 0 || strcmp(c, "log2+multiple") == 0)
+    {
+        double f = log2(a)*log2(b);
+        printf("%lf\n", f);
+    }
+    else if(strcmp(c, "log2+div") == 0 || strcmp(c, "log2+division") == 0)
+    {
+        double f = log2(a)/log2(b);
+        printf("%lf\n", f);
+    }
+    else if(strcmp(c, "log2+pow") == 0)
+    {
+        double f = pow(log2(a),log2(b));
+        printf("%lf\n", f);
+    }
+    else if(strcmp(c, "log2+exp") == 0)
+	{
+    	double f = exp(log2(a));
+    	double d = exp(log2(b));
+		printf("%lf and %lf", f,d);	
+	}
     else if(strcmp(c, "log10") == 0)
     {
         double f = log10(a);
@@ -444,24 +518,6 @@ int pi()
     printf("%.*lf\n", a, M_PI);
 }
 
-int clear()
-{
-	system("cls");
-	printf("+-----------------------+--------------------------------------------------+\n");
-    printf("| Instruments           | Description                                      |\n");
-    printf("+-----------------------+--------------------------------------------------+\n");
-    printf("| calc                  | Calculator for integers numbers                  |\n");
-    printf("| calcf                 | Calculator for float numbers                     |\n");
-    printf("| pi                    | Shows pi number from 0 to 15 decimal points      |\n");
-    printf("| circle_calc           | Circle calculator                                |\n");
-    printf("| sphere_calc           | Sphere calculator                                |\n");
-    printf("| exit                  | The command for turn off the programm            |\n");
-    printf("| clear                 | Clears the entire console screen                 |\n");
-    printf("+-----------------------+--------------------------------------------------+\n");
-	
-	return 0;
-}
-
 int circle_calc()
 {
 	printf("*========================================================================================================*\n");
@@ -515,6 +571,26 @@ int sphere_calc()
 	double V = 4/3*pi*R*R*R;
 	printf("S = %lf cm2\n", S);
 	printf("V = %lf cm3\n", V);
+	
+	return 0;
+}
+
+int clear()
+{
+	system("cls");
+	printf("+-----------------------+--------------------------------------------------+\n");
+    printf("| Instruments           | Description                                      |\n");
+    printf("+-----------------------+--------------------------------------------------+\n");
+    printf("| calc                  | Calculator for integers numbers                  |\n");
+    printf("| calcf                 | Calculator for float numbers                     |\n");
+    printf("| pi                    | Shows pi number from 0 to 15 decimal points      |\n");
+    printf("| circle_calc           | Circle calculator                                |\n");
+    printf("| sphere_calc           | Sphere calculator                                |\n");
+    printf("| exit                  | The command for turn off the programm            |\n");
+    printf("| clear                 | Clears the entire console screen                 |\n");
+    printf("+-----------------------+--------------------------------------------------+\n");
+	
+	return 0;
 }
 
 int main()
@@ -533,7 +609,7 @@ int main()
 	char a[99];
 	while(1)
 	{
-		printf("> ");
+		printf(">>> ");
 		scanf("%s", a);
 		if(strcmp(a, "calc") == 0)
 		{
@@ -546,14 +622,6 @@ int main()
 		else if(strcmp(a, "pi") == 0)
 		{
 			pi();
-		}
-		else if(strcmp(a, "clear") == 0)
-		{
-			clear();
-		}
-		else if(strcmp(a, "exit") == 0)
-		{
-			break;
 		}	
 		else if(strcmp(a, "circle_calc") == 0)
 		{
@@ -562,6 +630,14 @@ int main()
 		else if(strcmp(a, "sphere_calc") == 0)
 		{
 			sphere_calc();	
+		}
+		else if(strcmp(a, "clear") == 0)
+		{
+			clear();
+		}
+		else if(strcmp(a, "exit") == 0)
+		{
+			break;
 		}
 		else
 		{
