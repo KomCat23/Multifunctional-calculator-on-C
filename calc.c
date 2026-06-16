@@ -250,6 +250,43 @@ int calc()
     	double d = exp(cbrt(b));
 		printf("%lf and %lf", f,d);	
 	}
+	else if(strcmp(c, "qdrt") == 0)        
+    {
+        double f = sqrt(sqrt(a));
+        double g = sqrt(sqrt(b));
+        printf("%lf and %lf\n", f,g);
+    }
+    else if(strcmp(c, "qdrt+sum") == 0 || strcmp(c, "qdrt+plus") == 0)
+    {
+        double f = sqrt(sqrt(a))+sqrt(sqrt(b));
+        printf("%lf\n", f);
+    }
+    else if(strcmp(c, "qdrt+min") == 0 || strcmp(c, "qdrt+minus") == 0)
+    {
+    	double f = sqrt(sqrt(a))-sqrt(sqrt(b));
+        printf("%lf\n", f);
+    }
+    else if(strcmp(c, "qdrt+mul") == 0 || strcmp(c, "qdrt+multiple") == 0)
+    {
+    	double f = sqrt(sqrt(a))*sqrt(sqrt(b));
+        printf("%lf\n", f);
+    }
+    else if(strcmp(c, "qdrt+div") == 0 || (strcmp(c, "qdrt+division") == 0))
+    {
+    	double f = sqrt(sqrt(a))/sqrt(sqrt(b));
+        printf("%lf\n", f);
+    }
+    else if(strcmp(c, "qdrt+pow") == 0)
+    {
+    	double f = pow(sqrt(sqrt(a)),sqrt(sqrt(b)));
+        printf("%lf\n", f);
+    }
+    else if(strcmp(c, "qdrt+exp") == 0)
+	{
+    	double f = exp(sqrt(sqrt(a)));
+    	double d = exp(sqrt(sqrt(b)));
+		printf("%lf and %lf", f,d);	
+	}
     else
     {
         printf("err\n");
@@ -497,6 +534,43 @@ int calcf()
 	{
     	double f = exp(cbrt(a));
     	double d = exp(cbrt(b));
+		printf("%lf and %lf", f,d);	
+	}
+	else if(strcmp(c, "qdrt") == 0)        
+    {
+        double f = sqrt(sqrt(a));
+        double g = sqrt(sqrt(b));
+        printf("%lf and %lf\n", f,g);
+    }
+    else if(strcmp(c, "qdrt+sum") == 0 || strcmp(c, "qdrt+plus") == 0)
+    {
+        double f = sqrt(sqrt(a))+sqrt(sqrt(b));
+        printf("%lf\n", f);
+    }
+    else if(strcmp(c, "qdrt+min") == 0 || strcmp(c, "qdrt+minus") == 0)
+    {
+    	double f = sqrt(sqrt(a))-sqrt(sqrt(b));
+        printf("%lf\n", f);
+    }
+    else if(strcmp(c, "qdrt+mul") == 0 || strcmp(c, "qdrt+multiple") == 0)
+    {
+    	double f = sqrt(sqrt(a))*sqrt(sqrt(b));
+        printf("%lf\n", f);
+    }
+    else if(strcmp(c, "qdrt+div") == 0 || (strcmp(c, "qdrt+division") == 0))
+    {
+    	double f = sqrt(sqrt(a))/sqrt(sqrt(b));
+        printf("%lf\n", f);
+    }
+    else if(strcmp(c, "qdrt+pow") == 0)
+    {
+    	double f = pow(sqrt(sqrt(a)),sqrt(sqrt(b)));
+        printf("%lf\n", f);
+    }
+    else if(strcmp(c, "qdrt+exp") == 0)
+	{
+    	double f = exp(sqrt(sqrt(a)));
+    	double d = exp(sqrt(sqrt(b)));
 		printf("%lf and %lf", f,d);	
 	}
     else
