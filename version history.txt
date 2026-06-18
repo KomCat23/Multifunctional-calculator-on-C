@@ -12,3 +12,4 @@ v1.0.3 - added log2 for calc and calcf
 v1.0.4 - added qdrt for calc and calcf.
 v1.0.5 - added exp as a single function
 v1.0.6 - added log4 for calc and calcf
+v1.0.6_1 - fix bugs with round in calcf
