@@ -9,7 +9,7 @@ v1.0.0 - THE RELEASE! four instruments(calc,calcf,pi and circle_calc) and the sy
 v1.0.1 - fix bugs and made pow() and exp() separately
 v1.0.2 - added new insrument(sphere_calc)
 v1.0.3 - added log2 for calc and calcf
-v1.0.4 - added qdrt for calc and calcf.
+v1.0.4 - added qdrt for calc and calcf
 v1.0.5 - added exp as a single function
 v1.0.6 - added log4 for calc and calcf
 v1.0.6_01 - fix bugs with round in calcf
