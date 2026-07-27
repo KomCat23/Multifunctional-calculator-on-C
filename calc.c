@@ -17,7 +17,7 @@ int calc()
     long b;
     scanf("%ld", &a);
     scanf("%ld", &b);
-    char c[99];
+    char c[39];
     scanf("%s", c);
     if(strcmp(c, "+") == 0 || (strcmp(c, "sum") == 0) || (strcmp(c, "plus") == 0))
     {
@@ -145,6 +145,24 @@ int calc()
     	double d = exp(log2(b));
 		printf("%lf and %lf\n", f,d);	
 	}
+	else if(strcmp(c, "log2+sqrt") == 0)
+    {
+        double f = sqrt(log2(a));
+        double g = sqrt(log2(b));
+        printf("%lf and %lf\n", f,g);
+    }
+    else if(strcmp(c, "log2+cbrt") == 0)
+    {
+        double f = cbrt(log2(a));
+        double g = cbrt(log2(b));
+        printf("%lf and %lf\n", f,g);
+    }
+    else if(strcmp(c, "log2+qdrt") == 0)
+    {
+        double f = sqrt(sqrt(log2(a)));
+        double g = sqrt(sqrt(log2(b)));
+        printf("%lf and %lf\n", f,g);
+    }
 	else if(strcmp(c, "log4") == 0)
 	{
 		double f =  log2(a)/2;
@@ -183,6 +201,24 @@ int calc()
     	double d = exp(log2(b)/2);
 		printf("%lf and %lf\n", f,d);	
 	}
+	else if(strcmp(c, "log4+sqrt") == 0)
+	{
+		double f =  sqrt(log2(a)/2);
+		double d =  sqrt(log2(b)/2);
+		printf("%lf and %lf\n", f,d);	
+	}
+	else if(strcmp(c, "log4+cbrt") == 0)
+	{
+		double f =  cbrt(log2(a)/2);
+		double d =  cbrt(log2(b)/2);
+		printf("%lf and %lf\n", f,d);	
+	}
+	else if(strcmp(c, "log4+qdrt") == 0)        
+    {
+        double f = sqrt(sqrt(log2(a)/2));
+        double g = sqrt(sqrt(log2(b)/2));
+        printf("%lf and %lf\n", f,g);
+    }
     else if(strcmp(c, "log10") == 0)
     {
         double f = log10(a);
@@ -220,6 +256,24 @@ int calc()
     	double d = exp(log10(b));
 		printf("%lf and %lf", f,d);	
 	}
+	else if(strcmp(c, "log10+sqrt") == 0)        
+    {
+        double f = sqrt(log10(a));
+        double g = sqrt(log10(b));
+        printf("%lf and %lf\n", f,g);
+    }
+    else if(strcmp(c, "log10+cbrt") == 0)
+    {
+        double f = cbrt(log10(a));
+        double g = cbrt(log10(b));
+        printf("%lf and %lf\n", f,g);
+    }
+	else if(strcmp(c, "log10+qdrt") == 0)        
+    {
+        double f = sqrt(sqrt(log10(a)));
+        double g = sqrt(sqrt(log10(b)));
+        printf("%lf and %lf\n", f,g);
+    }
     else if(strcmp(c, "sqrt") == 0)        
     {
         double f = sqrt(a);
@@ -474,6 +528,24 @@ int calcf()
     	double d = exp(log2(b));
 		printf("%lf and %lf", f,d);	
 	}
+	else if(strcmp(c, "log2+sqrt") == 0)
+    {
+        double f = sqrt(log2(a));
+        double g = sqrt(log2(b));
+        printf("%lf and %lf\n", f,g);
+    }
+    else if(strcmp(c, "log2+cbrt") == 0)
+    {
+        double f = cbrt(log2(a));
+        double g = cbrt(log2(b));
+        printf("%lf and %lf\n", f,g);
+    }
+    else if(strcmp(c, "log2+qdrt") == 0)
+    {
+        double f = sqrt(sqrt(log2(a)));
+        double g = sqrt(sqrt(log2(b)));
+        printf("%lf and %lf\n", f,g);
+    }
 	else if(strcmp(c, "log4") == 0)
 	{
 		double f =  log2(a)/2;
@@ -512,6 +584,24 @@ int calcf()
     	double d = exp(log2(b)/2);
 		printf("%lf and %lf\n", f,d);	
 	}
+	else if(strcmp(c, "log4+sqrt") == 0)
+	{
+		double f =  sqrt(log2(a)/2);
+		double d =  sqrt(log2(b)/2);
+		printf("%lf and %lf\n", f,d);	
+	}
+	else if(strcmp(c, "log4+cbrt") == 0)
+	{
+		double f =  cbrt(log2(a)/2);
+		double d =  cbrt(log2(b)/2);
+		printf("%lf and %lf\n", f,d);	
+	}
+	else if(strcmp(c, "log4+qdrt") == 0)        
+    {
+        double f = sqrt(sqrt(log2(a)/2));
+        double g = sqrt(sqrt(log2(b)/2));
+        printf("%lf and %lf\n", f,g);
+    }
     else if(strcmp(c, "log10") == 0)
     {
         double f = log10(a);
@@ -549,6 +639,24 @@ int calcf()
     	double d = exp(log10(b));
 		printf("%lf and %lf", f,d);	
 	}
+	else if(strcmp(c, "log10+sqrt") == 0)        
+    {
+        double f = sqrt(log10(a));
+        double g = sqrt(log10(a));
+        printf("%lf and %lf\n", f,g);
+    }
+    else if(strcmp(c, "log10+cbrt") == 0)
+    {
+        double f = cbrt(log10(a));
+        double g = cbrt(log10(a));
+        printf("%lf and %lf\n", f,g);
+    }
+	else if(strcmp(c, "log10+qdrt") == 0)        
+    {
+        double f = sqrt(sqrt(log10(a)));
+        double g = sqrt(sqrt(log10(a)));
+        printf("%lf and %lf\n", f,g);
+    }
     else if(strcmp(c, "sqrt") == 0)
     {
         double f = sqrt(a);
