@@ -2,6 +2,9 @@
 #include<stdlib.h>
 #include<math.h>
 #include<string.h>
+#include<windows.h>
+#include<winnls.h>
+#include<locale.h>
 
 
 
@@ -69,7 +72,7 @@ int calc()
 	{
     	double f = exp(a);
     	double d = exp(b);
-		printf("%lf and %lf", f,d);	
+		printf("%lf and %lf\n", f,d);	
 	}
     else if(strcmp(c, "log") == 0)
     {
@@ -106,8 +109,26 @@ int calc()
 	{
     	double f = exp(log(a));
     	double d = exp(log(b));
-		printf("%lf and %lf", f,d);	
+		printf("%lf and %lf\n", f,d);	
 	}
+	else if(strcmp(c, "log+sqrt") == 0)
+	{
+    	double f = sqrt(log(a));
+    	double d = sqrt(log(b));
+		printf("%lf and %lf\n", f,d);	
+	}
+	else if(strcmp(c, "log+cbrt") == 0)
+	{
+    	double f = cbrt(log(a));
+    	double d = cbrt(log(b));
+		printf("%lf and %lf\n", f,d);	
+	}
+	else if(strcmp(c, "log+qdrt") == 0)
+    {
+        double f = sqrt(sqrt(log(a)));
+        double g = sqrt(sqrt(log(b)));
+        printf("%lf and %lf\n", f,g);
+    }
 	else if(strcmp(c, "log2") == 0)
     {
         double f = log2(a);
@@ -235,7 +256,7 @@ int calc()
         double f = log10(a)-log10(b);
         printf("%lf\n", f);
     }
-    else if(strcmp(c, "log+mul") == 0 || strcmp(c, "log+multiple") == 0)
+    else if(strcmp(c, "log10+mul") == 0 || strcmp(c, "log10+multiple") == 0)
     {
         double f = log10(a)*log10(b);
         printf("%lf\n", f);
@@ -254,7 +275,7 @@ int calc()
 	{
     	double f = exp(log10(a));
     	double d = exp(log10(b));
-		printf("%lf and %lf", f,d);	
+		printf("%lf and %lf\n", f,d);	
 	}
 	else if(strcmp(c, "log10+sqrt") == 0)        
     {
@@ -309,7 +330,7 @@ int calc()
 	{
     	double f = exp(sqrt(a));
     	double d = exp(sqrt(b));
-		printf("%lf and %lf", f,d);	
+		printf("%lf and %lf\n", f,d);	
 	}
     else if(strcmp(c, "cbrt") == 0)             
     {                                           
@@ -346,7 +367,7 @@ int calc()
 	{
     	double f = exp(cbrt(a));
     	double d = exp(cbrt(b));
-		printf("%lf and %lf", f,d);	
+		printf("%lf and %lf\n", f,d);	
 	}
 	else if(strcmp(c, "qdrt") == 0)        
     {
@@ -383,7 +404,7 @@ int calc()
 	{
     	double f = exp(sqrt(sqrt(a)));
     	double d = exp(sqrt(sqrt(b)));
-		printf("%lf and %lf", f,d);	
+		printf("%lf and %lf\n", f,d);	
 	}
     else
     {
@@ -411,8 +432,7 @@ int calcf()
     {
         int f = round(a);
         int g = round(b);
-        printf("%d ", f);
-        printf("and %d\n", g);
+        printf("%d and %d\n", f, g);
 
     }
     else if(strcmp(c, "+") == 0 || (strcmp(c, "sum") == 0) || (strcmp(c, "plus") == 0))
@@ -452,7 +472,7 @@ int calcf()
 	{
     	double f = exp(a);
     	double d = exp(b);
-		printf("%lf and %lf", f,d);	
+		printf("%lf and %lf\n", f,d);	
 	}
     else if(strcmp(c, "log") == 0)
     {
@@ -489,8 +509,26 @@ int calcf()
 	{
     	double f = exp(log(a));
     	double d = exp(log(b));
-		printf("%lf and %lf", f,d);	
+		printf("%lf and %lf\n", f,d);	
 	}
+	else if(strcmp(c, "log+sqrt") == 0)
+	{
+    	double f = sqrt(log(a));
+    	double d = sqrt(log(b));
+		printf("%lf and %lf\n", f,d);	
+	}
+	else if(strcmp(c, "log+cbrt") == 0)
+	{
+    	double f = cbrt(log(a));
+    	double d = cbrt(log(b));
+		printf("%lf and %lf\n", f,d);	
+	}
+	else if(strcmp(c, "log+qdrt") == 0)
+    {
+        double f = sqrt(sqrt(log(a)));
+        double g = sqrt(sqrt(log(b)));
+        printf("%lf and %lf\n", f,g);
+    }
 	else if(strcmp(c, "log2") == 0)
     {
         double f = log2(a);
@@ -526,7 +564,7 @@ int calcf()
 	{
     	double f = exp(log2(a));
     	double d = exp(log2(b));
-		printf("%lf and %lf", f,d);	
+		printf("%lf and %lf\n", f,d);	
 	}
 	else if(strcmp(c, "log2+sqrt") == 0)
     {
@@ -637,7 +675,7 @@ int calcf()
 	{
     	double f = exp(log10(a));
     	double d = exp(log10(b));
-		printf("%lf and %lf", f,d);	
+		printf("%lf and %lf\n", f,d);	
 	}
 	else if(strcmp(c, "log10+sqrt") == 0)        
     {
@@ -692,7 +730,7 @@ int calcf()
 	{
     	double f = exp(sqrt(a));
     	double d = exp(sqrt(b));
-		printf("%lf and %lf", f,d);	
+		printf("%lf and %lf\n", f,d);	
 	}
     else if(strcmp(c, "cbrt") == 0)
     {
@@ -730,7 +768,7 @@ int calcf()
 	{
     	double f = exp(cbrt(a));
     	double d = exp(cbrt(b));
-		printf("%lf and %lf", f,d);	
+		printf("%lf and %lf\n", f,d);	
 	}
 	else if(strcmp(c, "qdrt") == 0)        
     {
@@ -767,7 +805,7 @@ int calcf()
 	{
     	double f = exp(sqrt(sqrt(a)));
     	double d = exp(sqrt(sqrt(b)));
-		printf("%lf and %lf", f,d);	
+		printf("%lf and %lf\n", f,d);	
 	}
     else
     {
@@ -786,19 +824,20 @@ int pi()
     int a;
     scanf("%d", &a);
     printf("%.*lf\n", a, M_PI);
+    return 0;
 }
 
 int circle_calc()
 {
 	printf("*==============================================================================================================================*\n");
-    printf("Instruction:\n");
-    printf("1. Write what you want to search: the entire circle(circle) or its sector(sector)\n");
-    printf("2. If you want to search for a circle, just write the radius(cm) of the circle\n");
-    printf("3. If you want to search for sector, just write the radius of the circle(cm) and the angle of the sector(in gradus of celcium)\n");
-    printf("*=============================================================================================================================*\n");		
-    char a[99];
-    scanf("%s", a);
-    if(strcmp(a,"circle") == 0)
+  printf("Instruction:\n");
+  printf("1. Write what you want to search: the entire circle(circle) or its sector(sector)\n");
+  printf("2. If you want to search for a circle, just write the radius(cm) of the circle\n");
+  printf("3. If you want to search for sector, just write the radius of the circle(cm) and the angle of the sector(in gradus of celcium)\n");
+  printf("*=============================================================================================================================*\n");		
+  char a[99];
+  scanf("%s", a);
+  if(strcmp(a,"circle") == 0)
 	{
 		int R;
 		double pi = M_PI;
@@ -814,9 +853,9 @@ int circle_calc()
 		int R;
 		int n;
 		double pi = M_PI;
-		printf("type the angle of sector: ");
+		printf("Type the angle of sector: ");
 		scanf("%d", &n);
-		printf("type the radius: ");
+		printf("Type the radius: ");
 		scanf("%d", &R);
 		double C = 2*pi*R;
 		double S = pi*R*R;
@@ -830,15 +869,15 @@ int circle_calc()
 
 int sphere_calc()
 {
-	printf("*========================================================================================================*\n");
+	printf("*====================================================================================================*\n");
     printf("Instruction:\n");
     printf("Write the radius of sphere\n");
-    printf("*========================================================================================================*\n");		
+    printf("*====================================================================================================*\n");		
 	int R;
 	double pi = M_PI;
 	scanf("%d", &R);
 	double S = 4*pi*R*R;
-	double V = 4/3*pi*R*R*R;
+	double V = 4.0/3.0*pi*R*R*R;
 	printf("S = %lf cm2\n", S);
 	printf("V = %lf cm3\n", V);
 	
@@ -848,7 +887,24 @@ int sphere_calc()
 int clear()
 {
 	system("cls");
-	printf("+-----------------------+--------------------------------------------------+\n");
+	LANGID langId = GetSystemDefaultUILanguage();
+	
+	if(langId == 0x0419){
+    printf("+-----------------------+--------------------------------------------------+\n");
+    printf("| Команда               | Описание                                         |\n");
+    printf("+-----------------------+--------------------------------------------------+\n");
+    printf("| calc                  | Калькулятор для целочисленных чисел              |\n");
+    printf("| calcf                 | Калькулятор для дробных чисел                    |\n");
+    printf("| pi                    | Показывает число пи от 0 до 15 после запятой цифр|\n");
+    printf("| circle_calc           | Калькулятор круга                                |\n");
+    printf("| sphere_calc           | Калькулятор шара                                 |\n");
+    printf("| exit                  | Отключает программу                              |\n");
+    printf("| clear                 | Очищает экран консоли                            |\n");
+    printf("| radian_calc           | Калькулятор для считывания радиана угла          |\n");
+    printf("+-----------------------+--------------------------------------------------+\n");		
+	}
+	else{
+		printf("+-----------------------+--------------------------------------------------+\n");
     printf("| Instruments           | Description                                      |\n");
     printf("+-----------------------+--------------------------------------------------+\n");
     printf("| calc                  | Calculator for integers numbers                  |\n");
@@ -858,14 +914,44 @@ int clear()
     printf("| sphere_calc           | Sphere calculator                                |\n");
     printf("| exit                  | The command for turn off the programm            |\n");
     printf("| clear                 | Clears the entire console screen                 |\n");
+    printf("| radian_calc           | Calculator for radian                            |\n");
     printf("+-----------------------+--------------------------------------------------+\n");
+	}
 	
+	return 0;
+}
+
+int radian_calc()
+{
+	double gradus;
+	printf("Write the gradus of celcium: ");
+	scanf("%lf", gradus);
+	double radian = gradus * M_PI / 180.0;
+	printf("%lf Gradus = %.4lf radiands\n", gradus, radian);
 	return 0;
 }
 
 int main()
 {
-	printf("+-----------------------+--------------------------------------------------+\n");
+	setlocale(LC_ALL, "Russian");
+	LANGID langId = GetSystemDefaultUILanguage();
+	
+	if(langId == 0x0419){
+    printf("+-----------------------+--------------------------------------------------+\n");
+    printf("| Команда               | Описание                                         |\n");
+    printf("+-----------------------+--------------------------------------------------+\n");
+    printf("| calc                  | Калькулятор для целочисленных чисел              |\n");
+    printf("| calcf                 | Калькулятор для дробных чисел                    |\n");
+    printf("| pi                    | Показывает число пи от 0 до 15 после запятой цифр|\n");
+    printf("| circle_calc           | Калькулятор круга                                |\n");
+    printf("| sphere_calc           | Калькулятор шара                                 |\n");
+    printf("| exit                  | Отключает программу                              |\n");
+    printf("| clear                 | Очищает экран консоли                            |\n");
+    printf("| radian_calc           | Калькулятор для считывания радиана угла          |\n");
+    printf("+-----------------------+--------------------------------------------------+\n");		
+	}
+	else{
+		printf("+-----------------------+--------------------------------------------------+\n");
     printf("| Instruments           | Description                                      |\n");
     printf("+-----------------------+--------------------------------------------------+\n");
     printf("| calc                  | Calculator for integers numbers                  |\n");
@@ -875,7 +961,10 @@ int main()
     printf("| sphere_calc           | Sphere calculator                                |\n");
     printf("| exit                  | The command for turn off the programm            |\n");
     printf("| clear                 | Clears the entire console screen                 |\n");
+    printf("| radian_calc           | Calculator for radian                            |\n");
     printf("+-----------------------+--------------------------------------------------+\n");
+	}
+	
 	char a[99];
 	while(1)
 	{
@@ -905,13 +994,17 @@ int main()
 		{
 			clear();
 		}
+		else if(strcmp(a, "radian_calc") == 0)
+		{
+			radian_calc();
+		}
 		else if(strcmp(a, "exit") == 0)
 		{
 			break;
 		}
 		else
 		{
-			printf("unknown command\n");
+			printf("Unknown command\n");
 		}
 	}
     return 0;
