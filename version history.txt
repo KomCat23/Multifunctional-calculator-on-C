@@ -18,3 +18,4 @@ v1.0.8 - added russian language in the menu
 v1.0.9 - added radian_calc
 v1.0.9_01 - fix bugs with radian_calc
 v1.1.0 - added new command help() and fix bugs with circle_calc and sphere_calc
+v1.1.0_01 - I removed the Russian language because it was poorly displayed in the code in github
