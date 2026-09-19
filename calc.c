@@ -6,7 +6,9 @@
 #include<winnls.h>
 #include<locale.h>
 
-
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
 
 int calc()
 {
@@ -27,7 +29,7 @@ int calc()
   	if(a > 0 && b > 0)
 		{
   		unsigned long f = a+b;
-      printf("%ld\n", f);
+      printf("%lu\n", f);
 		}
 		else
 		{
@@ -98,264 +100,593 @@ int calc()
   	double d = exp(b);
 		printf("%lf and %lf\n", f,d);	
 	}
-  else if(strcmp(c, "log") == 0)
+    else if(strcmp(c, "log") == 0)
   {
-    double f = log(a);
-    double g = log(b);
-    printf("%lf and %lf\n", f,g);
+    if(a > 0 && b > 0)
+    {
+      double f = log(a);
+      double g = log(b);
+      printf("%lf and %lf\n", f,g);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
-  else if(strcmp(c, "log+sum") == 0 || strcmp(c, "log+plus") == 0)
+  else if(strcmp(c, "log+sum") == 0 || (strcmp(c, "log+plus") == 0))
   {
-    double f = log(a)+log(b);
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log(a)+log(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
-  else if(strcmp(c, "log+min") == 0 || strcmp(c, "log+minus") == 0)
+  else if(strcmp(c, "log+min") == 0 || (strcmp(c, "log+minus") == 0))
   {
-    double f = log(a)-log(b);
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log(a)-log(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log+mul") == 0 || strcmp(c, "log+multiple") == 0)
   {
-    double f = log(a)*log(b);
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log(a)*log(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log+div") == 0 || strcmp(c, "log+division") == 0)
   {
-    double f = log(a)/log(b);
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log(a)/log(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log+pow") == 0)
   {
-    double f = pow(log(a),log(b));
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = pow(log(a),log(b));
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log+exp") == 0)
   {
- 	  double f = exp(log(a));
- 	  double d = exp(log(b));
-		printf("%lf and %lf\n", f,d);	
+    if(a > 0 && b > 0)
+    {
+      double f = exp(log(a));
+      double d = exp(log(b));
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log+sqrt") == 0)
   {
- 	  double f = sqrt(log(a));
-   	double d = sqrt(log(b));
-		printf("%lf and %lf\n", f,d);	
+    if(a > 0 && b > 0)
+    {
+      double f = sqrt(log(a));
+      double d = sqrt(log(b));
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log+cbrt") == 0)
   {
- 	  double f = cbrt(log(a));
-   	double d = cbrt(log(b));
-		printf("%lf and %lf\n", f,d);	
+    if(a > 0 && b > 0)
+    {
+      double f = cbrt(log(a));
+      double d = cbrt(log(b));
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log+qdrt") == 0)
   {
-    double f = sqrt(sqrt(log(a)));
-    double g = sqrt(sqrt(log(b)));
-    printf("%lf and %lf\n", f,g);
+    if(a > 0 && b > 0)
+    {
+      double f = sqrt(sqrt(log(a)));
+      double g = sqrt(sqrt(log(b)));
+      printf("%lf and %lf\n", f,g);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }  
   }
   else if(strcmp(c, "log2") == 0)
   {
-    double f = log2(a);
-    double g = log2(b);
-    printf("%lf and %lf\n", f,g);
+    if(a > 0 && b > 0)
+    {
+      double f = log2(a);
+      double g = log2(b);
+      printf("%lf and %lf\n", f,g);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log2+sum") == 0 || strcmp(c, "log2+plus") == 0)
   {
-    double f = log2(a)+log2(b);
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log2(a)+log2(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log2+min") == 0 || strcmp(c, "log2+minus") == 0)
   {
-    double f = log2(a)-log2(b);
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log2(a)-log2(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log2+mul") == 0 || strcmp(c, "log2+multiple") == 0)
   {
-    double f = log2(a)*log2(b);
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log2(a)*log2(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log2+div") == 0 || strcmp(c, "log2+division") == 0)
   {
-    double f = log2(a)/log2(b);
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log2(a)/log2(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log2+pow") == 0)
   {
-    double f = pow(log2(a),log2(b));
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = pow(log2(a),log2(b));
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log2+exp") == 0)
   {
- 	  double f = exp(log2(a));
-   	double d = exp(log2(b));
-		printf("%lf and %lf\n", f,d);	
+    if(a > 0 && b > 0)
+    {
+      double f = exp(log2(a));
+      double d = exp(log2(b));
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log2+sqrt") == 0)
   {
-    double f = sqrt(log2(a));
-    double g = sqrt(log2(b));
-    printf("%lf and %lf\n", f,g);
+    if(a > 0 && b > 0)
+    {
+      double f = sqrt(log2(a));
+      double d = sqrt(log2(b));
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log2+cbrt") == 0)
   {
-    double f = cbrt(log2(a));
-    double g = cbrt(log2(b));
-    printf("%lf and %lf\n", f,g);
+    if(a > 0 && b > 0)
+    {
+      double f = cbrt(log2(a));
+      double d = cbrt(log2(b));
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log2+qdrt") == 0)
   {
-    double f = sqrt(sqrt(log2(a)));
-    double g = sqrt(sqrt(log2(b)));
-    printf("%lf and %lf\n", f,g);
+    if(a > 0 && b > 0)
+    {
+      double f = sqrt(sqrt(log2(a)));
+      double g = sqrt(sqrt(log2(b)));
+      printf("%lf and %lf\n", f,g);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log4") == 0)
   {
-		double f =  log2(a)/2;
-		double d =  log2(b)/2;
-		printf("%lf and %lf\n", f,d);	
+    if(a > 0 && b > 0)
+    {
+      double f =  log2(a)/2;
+      double d =  log2(b)/2;
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log4+sum") == 0 || strcmp(c, "log4+plus") == 0)
   {
-    double f = log2(a)/2+log2(b)/2;
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log2(a)/2+log2(b)/2;
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log4+min") == 0 || strcmp(c, "log4+minus") == 0)
   {
-    double f = log2(a)/2-log2(b)/2;
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log2(a)/2-log2(b)/2;
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log4+mul") == 0 || strcmp(c, "log4+multiple") == 0)
   {
-    double f = log2(a)/2*log2(b)/2;
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log2(a)/2*log2(b)/2;
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log4+div") == 0 || strcmp(c, "log4+division") == 0)
   {
- 	  double d = log2(b)/2;
-    double f = log2(a)/2/d;
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log2(a)/2;
+      double g = log2(b)/2/f;
+      printf("%lf\n", g);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log4+pow") == 0)
   {
-    double f = pow(log2(a)/2,log2(b)/2);
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = pow(log2(a)/2,log2(b)/2);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log4+exp") == 0)
   {
- 	  double f = exp(log2(a)/2);
-   	double d = exp(log2(b)/2);
-		printf("%lf and %lf\n", f,d);	
+    if(a > 0 && b > 0)
+    {
+      double f = exp(log2(a)/2);
+      double d = exp(log2(b)/2);
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log4+sqrt") == 0)
   {
-		double f =  sqrt(log2(a)/2);
-		double d =  sqrt(log2(b)/2);
-		printf("%lf and %lf\n", f,d);	
+    if(a > 0 && b > 0)
+    {
+      double f = sqrt(log2(a)/2);
+      double d = sqrt(log2(b)/2);
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log4+cbrt") == 0)
   {
-		double f =  cbrt(log2(a)/2);
-		double d =  cbrt(log2(b)/2);
-		printf("%lf and %lf\n", f,d);	
+    if(a > 0 && b > 0)
+    {
+      double f = cbrt(log2(a)/2);
+      double d = cbrt(log2(b)/2);
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log4+qdrt") == 0)        
   {
-    double f = sqrt(sqrt(log2(a)/2));
-    double g = sqrt(sqrt(log2(b)/2));
-    printf("%lf and %lf\n", f,g);
+    if(a > 0 && b > 0)
+    {
+      double f = sqrt(sqrt(log2(a)/2));
+      double g = sqrt(sqrt(log2(b)/2));
+      printf("%lf and %lf\n", f,g);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log10") == 0)
   {
-    double f = log10(a);
-    double g = log10(b);
-    printf("%lf and %lf\n", f,g);
+    if(a > 0 && b > 0)
+    {
+      double f = log10(a);
+      double g = log10(b);
+      printf("%lf and %lf\n", f,g);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log10+sum") == 0 || (strcmp(c, "log10+plus") == 0))
   {
-    double f = log10(a)+log10(b);
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log10(a)+log10(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log10+min") == 0 || (strcmp(c, "log10+minus") == 0))
   {
-    double f = log10(a)-log10(b);
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log10(a)-log10(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
-  else if(strcmp(c, "log10+mul") == 0 || strcmp(c, "log10+multiple") == 0)
+  else if(strcmp(c, "log10+mul") == 0 || (strcmp(c, "log10+multiple") == 0))
   {
-    double f = log10(a)*log10(b);
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log10(a)*log10(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log10+div") == 0 || (strcmp(c, "log10+division") == 0))
   {
-    double f = log10(a)/log10(b);
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log10(a)/log10(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log10+pow") == 0)
   {
-    double f = pow(log10(a),log10(b));
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = pow(log10(a),log10(b));
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log10+exp") == 0)
-	{
-	  double f = exp(log10(a));
-  	double d = exp(log10(b));
-		printf("%lf and %lf\n", f,d);	
-	}
-	else if(strcmp(c, "log10+sqrt") == 0)        
   {
-    double f = sqrt(log10(a));
-    double g = sqrt(log10(b));
-    printf("%lf and %lf\n", f,g);
+    if(a > 0 && b > 0)
+    {
+      double f = exp(log10(a));
+      double d = exp(log10(b));
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
+  }
+  else if(strcmp(c, "log10+sqrt") == 0)        
+  {
+    if(a > 0 && b > 0)
+    {
+      double f = sqrt(log10(a));
+      double d = sqrt(log10(b));
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log10+cbrt") == 0)
   {
-    double f = cbrt(log10(a));
-    double g = cbrt(log10(b));
-    printf("%lf and %lf\n", f,g);
+    if(a > 0 && b > 0)
+    {
+      double f = cbrt(log10(a));
+      double d = cbrt(log10(b));
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
-	else if(strcmp(c, "log10+qdrt") == 0)        
+  else if(strcmp(c, "log10+qdrt") == 0)        
   {
-    double f = sqrt(sqrt(log10(a)));
-    double g = sqrt(sqrt(log10(b)));
-    printf("%lf and %lf\n", f,g);
+    if(a > 0 && b > 0)
+    {
+      double f = sqrt(sqrt(log10(a)));
+      double g = sqrt(sqrt(log10(b)));
+      printf("%lf and %lf\n", f,g);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
-  else if(strcmp(c, "sqrt") == 0)        
+  else if(strcmp(c, "sqrt") == 0)
   {
-    double f = sqrt(a);
-    double g = sqrt(b);
-    printf("%lf and %lf\n", f,g);
+    if(a >= 0 && b >= 0)
+    {
+      double f = sqrt(a);
+      double g = sqrt(b);
+      printf("%lf and %lf\n", f,g);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "sqrt+sum") == 0 || strcmp(c, "sqrt+plus") == 0)
   {
-    double f = sqrt(a)+sqrt(b);
-    printf("%lf\n", f);
+    if(a >= 0 && b >= 0)
+    {
+      double f = sqrt(a)+sqrt(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "sqrt+min") == 0 || strcmp(c, "sqrt+minus") == 0)
   {
-    double f = sqrt(a)-sqrt(b);
-    printf("%lf\n", f);
+    if(a >= 0 && b >= 0)
+    {
+      double f = sqrt(a)-sqrt(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "sqrt+mul") == 0 || strcmp(c, "sqrt+multiple") == 0)
   {
-    double f = sqrt(a)*sqrt(b);
-    printf("%lf\n", f);
+    if(a >= 0 && b >= 0)
+    {
+      double f = sqrt(a)*sqrt(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "sqrt+div") == 0 || (strcmp(c, "sqrt+division") == 0))
   {
- 	  double f = sqrt(a)/sqrt(b);
-    printf("%lf\n", f);
+    if(a >= 0 && b >= 0)
+    {
+      double f = sqrt(a)/sqrt(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "sqrt+pow") == 0)
   {
-    double f = pow(sqrt(a),sqrt(b));
-    printf("%lf\n", f);
+    if(a >= 0 && b >= 0)
+    {
+      double f = pow(sqrt(a),sqrt(b));
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "sqrt+exp") == 0)
-	{
-	  double f = exp(sqrt(a));
-  	double d = exp(sqrt(b));
-		printf("%lf and %lf\n", f,d);	
-	}
+  {
+    if(a >= 0 && b >= 0)
+    {
+      double f = exp(sqrt(a));
+      double d = exp(sqrt(b));
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
+  }
   else if(strcmp(c, "cbrt") == 0)             
   {                                           
     double f = cbrt(a);
@@ -456,7 +787,7 @@ int calcf()
   {
     long f = round(a);
     long g = round(b);
-    printf("%d and %d\n", f, g);
+    printf("%ld and %ld\n", f, g);
 
   }
   else if(strcmp(c, "+") == 0 || (strcmp(c, "sum") == 0) || (strcmp(c, "plus") == 0))
@@ -500,261 +831,590 @@ int calcf()
 	}
   else if(strcmp(c, "log") == 0)
   {
-    double f = log(a);
-    double g = log(b);
-    printf("%lf and %lf\n", f,g);
+    if(a > 0 && b > 0)
+    {
+      double f = log(a);
+      double g = log(b);
+      printf("%lf and %lf\n", f,g);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log+sum") == 0 || (strcmp(c, "log+plus") == 0))
   {
-    double f = log(a)+log(b);
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log(a)+log(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log+min") == 0 || (strcmp(c, "log+minus") == 0))
   {
-    double f = log(a)-log(b);
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log(a)-log(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log+mul") == 0 || strcmp(c, "log+multiple") == 0)
   {
-    double f = log(a)*log(b);
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log(a)*log(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log+div") == 0 || strcmp(c, "log+division") == 0)
   {
-    double f = log(a)/log(b);
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log(a)/log(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log+pow") == 0)
   {
-    double f = pow(log(a),log(b));
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = pow(log(a),log(b));
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log+exp") == 0)
 	{
-	  double f = exp(log(a));
-	  double d = exp(log(b));
-		printf("%lf and %lf\n", f,d);	
+    if(a > 0 && b > 0)
+    {
+      double f = exp(log(a));
+      double d = exp(log(b));
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
 	}
 	else if(strcmp(c, "log+sqrt") == 0)
 	{
-	  double f = sqrt(log(a));
-  	double d = sqrt(log(b));
-		printf("%lf and %lf\n", f,d);	
+	  if(a > 0 && b > 0)
+    {
+      double f = sqrt(log(a));
+      double d = sqrt(log(b));
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
 	}
 	else if(strcmp(c, "log+cbrt") == 0)
 	{
-	  double f = cbrt(log(a));
-  	double d = cbrt(log(b));
-		printf("%lf and %lf\n", f,d);	
+	  if(a > 0 && b > 0)
+    {
+      double f = cbrt(log(a));
+      double d = cbrt(log(b));
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
 	}
 	else if(strcmp(c, "log+qdrt") == 0)
-  {	  
-    double f = sqrt(sqrt(log(a)));
-    double g = sqrt(sqrt(log(b)));
-    printf("%lf and %lf\n", f,g);
+  {
+    if(a > 0 && b > 0)
+    {
+      double f = sqrt(sqrt(log(a)));
+      double g = sqrt(sqrt(log(b)));
+      printf("%lf and %lf\n", f,g);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }  
   }
 	else if(strcmp(c, "log2") == 0)
   {
-    double f = log2(a);
-    double g = log2(b);
-    printf("%lf and %lf\n", f,g);
+    if(a > 0 && b > 0)
+    {
+      double f = log2(a);
+      double g = log2(b);
+      printf("%lf and %lf\n", f,g);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log2+sum") == 0 || strcmp(c, "log2+plus") == 0)
   {
-    double f = log2(a)+log2(b);
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log2(a)+log2(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log2+min") == 0 || strcmp(c, "log2+minus") == 0)
   {
-    double f = log2(a)-log2(b);
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log2(a)-log2(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log2+mul") == 0 || strcmp(c, "log2+multiple") == 0)
   {
-    double f = log2(a)*log2(b);
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log2(a)*log2(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log2+div") == 0 || strcmp(c, "log2+division") == 0)
   {
-    double f = log2(a)/log2(b);
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log2(a)/log2(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log2+pow") == 0)
   {
-    double f = pow(log2(a),log2(b));
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = pow(log2(a),log2(b));
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log2+exp") == 0)
 	{
-	  double f = exp(log2(a));
-	  double d = exp(log2(b));
-		printf("%lf and %lf\n", f,d);	
+    if(a > 0 && b > 0)
+    {
+      double f = exp(log2(a));
+      double d = exp(log2(b));
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
 	}
 	else if(strcmp(c, "log2+sqrt") == 0)
   {
-    double f = sqrt(log2(a));
-    double g = sqrt(log2(b));
-    printf("%lf and %lf\n", f,g);
+    if(a > 0 && b > 0)
+    {
+      double f = sqrt(log2(a));
+      double d = sqrt(log2(b));
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log2+cbrt") == 0)
   {
-    double f = cbrt(log2(a));
-    double g = cbrt(log2(b));
-    printf("%lf and %lf\n", f,g);
+    if(a > 0 && b > 0)
+    {
+      double f = cbrt(log2(a));
+      double d = cbrt(log2(b));
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log2+qdrt") == 0)
   {
-    double f = sqrt(sqrt(log2(a)));
-    double g = sqrt(sqrt(log2(b)));
-    printf("%lf and %lf\n", f,g);
+    if(a > 0 && b > 0)
+    {
+      double f = sqrt(sqrt(log2(a)));
+      double g = sqrt(sqrt(log2(b)));
+      printf("%lf and %lf\n", f,g);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
 	else if(strcmp(c, "log4") == 0)
 	{
-		double f =  log2(a)/2;
-		double d =  log2(b)/2;
-		printf("%lf and %lf\n", f,d);	
+    if(a > 0 && b > 0)
+    {
+      double f =  log2(a)/2;
+      double d =  log2(b)/2;
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
 	}
 	else if(strcmp(c, "log4+sum") == 0 || strcmp(c, "log4+plus") == 0)
   {
-    double f = log2(a)/2+log2(b)/2;
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log2(a)/2+log2(b)/2;
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log4+min") == 0 || strcmp(c, "log4+minus") == 0)
   {
-    double f = log2(a)/2-log2(b)/2;
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log2(a)/2-log2(b)/2;
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log4+mul") == 0 || strcmp(c, "log4+multiple") == 0)
   {
-    double f = log2(a)/2*log2(b)/2;
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log2(a)/2*log2(b)/2;
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log4+div") == 0 || strcmp(c, "log4+division") == 0)
   {
- 	  double d = log2(b)/2;
-    double f = log2(a)/2/d;
-    printf("%lf\n", f);
+ 	  if(a > 0 && b > 0)
+    {
+      double f = log2(a)/2;
+      double g = log2(b)/2/f;
+      printf("%lf\n", g);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log4+pow") == 0)
   {
-    double f = pow(log2(a)/2,log2(b)/2);
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = pow(log2(a)/2,log2(b)/2);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log4+exp") == 0)
 	{
-	  double f = exp(log2(a)/2);
-	  double d = exp(log2(b)/2);
-		printf("%lf and %lf\n", f,d);	
+    if(a > 0 && b > 0)
+    {
+      double f = exp(log2(a)/2);
+      double d = exp(log2(b)/2);
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
 	}
 	else if(strcmp(c, "log4+sqrt") == 0)
 	{
-		double f =  sqrt(log2(a)/2);
-		double d =  sqrt(log2(b)/2);
-		printf("%lf and %lf\n", f,d);	
+		if(a > 0 && b > 0)
+    {
+      double f = sqrt(log2(a)/2);
+      double d = sqrt(log2(b)/2);
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
 	}
 	else if(strcmp(c, "log4+cbrt") == 0)
 	{
-		double f =  cbrt(log2(a)/2);
-		double d =  cbrt(log2(b)/2);
-		printf("%lf and %lf\n", f,d);	
+		if(a > 0 && b > 0)
+    {
+      double f = cbrt(log2(a)/2);
+      double d = cbrt(log2(b)/2);
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
 	}
 	else if(strcmp(c, "log4+qdrt") == 0)        
   {
-    double f = sqrt(sqrt(log2(a)/2));
-    double g = sqrt(sqrt(log2(b)/2));
-    printf("%lf and %lf\n", f,g);
+    if(a > 0 && b > 0)
+    {
+      double f = sqrt(sqrt(log2(a)/2));
+      double g = sqrt(sqrt(log2(b)/2));
+      printf("%lf and %lf\n", f,g);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log10") == 0)
   {
-    double f = log10(a);
-    double g = log10(b);
-    printf("%lf and %lf\n", f,g);
+    if(a > 0 && b > 0)
+    {
+      double f = log10(a);
+      double g = log10(b);
+      printf("%lf and %lf\n", f,g);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log10+sum") == 0 || (strcmp(c, "log10+plus") == 0))
   {
-    double f = log10(a)+log10(b);
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log10(a)+log10(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log10+min") == 0 || (strcmp(c, "log10+minus") == 0))
   {
-    double f = log10(a)-log10(b);
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log10(a)-log10(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log10+mul") == 0 || (strcmp(c, "log10+multiple") == 0))
   {
-    double f = log10(a)*log10(b);
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log10(a)*log10(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log10+div") == 0 || (strcmp(c, "log10+division") == 0))
   {
-    double f = log10(a)/log10(b);
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = log10(a)/log10(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log10+pow") == 0)
   {
-    double f = pow(log10(a),log10(b));
-    printf("%lf\n", f);
+    if(a > 0 && b > 0)
+    {
+      double f = pow(log10(a),log10(b));
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log10+exp") == 0)
 	{
-	  double f = exp(log10(a));
-	  double d = exp(log10(b));
-    printf("%lf and %lf\n", f,d);	
+    if(a > 0 && b > 0)
+    {
+      double f = exp(log10(a));
+      double d = exp(log10(b));
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
 	}
 	else if(strcmp(c, "log10+sqrt") == 0)        
   {
-    double f = sqrt(log10(a));
-    double g = sqrt(log10(a));
-    printf("%lf and %lf\n", f,g);
+    if(a > 0 && b > 0)
+    {
+      double f = sqrt(log10(a));
+      double d = sqrt(log10(b));
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "log10+cbrt") == 0)
   {
-    double f = cbrt(log10(a));
-    double g = cbrt(log10(a));
-    printf("%lf and %lf\n", f,g);
+    if(a > 0 && b > 0)
+    {
+      double f = cbrt(log10(a));
+      double d = cbrt(log10(b));
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
 	else if(strcmp(c, "log10+qdrt") == 0)        
   {
-    double f = sqrt(sqrt(log10(a)));
-    double g = sqrt(sqrt(log10(a)));
-    printf("%lf and %lf\n", f,g);
+    if(a > 0 && b > 0)
+    {
+      double f = sqrt(sqrt(log10(a)));
+      double g = sqrt(sqrt(log10(b)));
+      printf("%lf and %lf\n", f,g);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "sqrt") == 0)
   {
-    double f = sqrt(a);
-    double g = sqrt(b);
-    printf("%lf and %lf\n", f,g);
+    if(a >= 0 && b >= 0)
+    {
+      double f = sqrt(a);
+      double g = sqrt(b);
+      printf("%lf and %lf\n", f,g);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "sqrt+sum") == 0 || strcmp(c, "sqrt+plus") == 0)
   {
-    double f = sqrt(a)+sqrt(b);
-    printf("%lf\n", f);
+    if(a >= 0 && b >= 0)
+    {
+      double f = sqrt(a)+sqrt(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "sqrt+min") == 0 || strcmp(c, "sqrt+minus") == 0)
   {
-    double f = sqrt(a)-sqrt(b);
-    printf("%lf\n", f);
+    if(a >= 0 && b >= 0)
+    {
+      double f = sqrt(a)-sqrt(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "sqrt+mul") == 0 || strcmp(c, "sqrt+multiple") == 0)
   {
-    double f = sqrt(a)*sqrt(b);
-    printf("%lf\n", f);
+    if(a >= 0 && b >= 0)
+    {
+      double f = sqrt(a)*sqrt(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "sqrt+div") == 0 || (strcmp(c, "sqrt+division") == 0))
   {
- 	  double f = sqrt(a)/sqrt(b);
-    printf("%lf\n", f);
+ 	  if(a >= 0 && b >= 0)
+    {
+      double f = sqrt(a)/sqrt(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "sqrt+pow") == 0)
   {
-	  double f = pow(sqrt(a),sqrt(b));
-    printf("%lf\n", f);
+    if(a >= 0 && b >= 0)
+    {
+      double f = pow(sqrt(a),sqrt(b));
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "sqrt+exp") == 0)
 	{
-	  double f = exp(sqrt(a));
-  	double d = exp(sqrt(b));
-		printf("%lf and %lf\n", f,d);	
+    if(a >= 0 && b >= 0)
+    {
+      double f = exp(sqrt(a));
+      double d = exp(sqrt(b));
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
 	}
   else if(strcmp(c, "cbrt") == 0)
   {
@@ -973,7 +1633,7 @@ int radian_calc()
 {
 	printf("Write the angle in gradus of celcium: ");
 	double gradus;
-	double pi = 3.1415;
+	double pi = M_PI;
 	scanf("%lf", &gradus);
 	double radian = gradus*pi/180.0;
 	printf("%.1lf Gradus = %.4lf radiands\n", gradus, radian);
@@ -997,7 +1657,7 @@ int help()
     printf("1. Dont try to enter floats(the compiler will make them integers)\n");
     printf("2. When dividing do not put 0 as the second number(there will be an error)\n");
     printf("3. When taking the root of a number dont try to make it negative(there will be an error)\n");
-    printf("4. When calculating the logarithm of a number do not try to make it negative(there will be an error)\n");
+    printf("4. When calculating the logarithm of a number do not try to make it negative or do not write the 0(there will be an error)\n");
     printf("*==========================================*\n");
 	}
 	else if(strcmp(a, "calcf") == 0)
@@ -1008,7 +1668,7 @@ int help()
 	  printf("1. Dont try to enter integers(the compiler will make them floats)\n");
 	  printf("2. When dividing do not put 0 as the second number(there will be an error)\n");
 	  printf("3. When taking the root of a number dont try to make it negative(there will be an error)\n");
-	  printf("4. When calculating the logarithm of a number do not try to make it negative(there will be an error)\n");
+	  printf("4. When calculating the logarithm of a number do not try to make it negative or do not write the 0(there will be an error)\n");
 	  printf("*==========================================*\n");
 	}
 	else if(strcmp(a, "pi") == 0)
@@ -1060,6 +1720,7 @@ int help()
   	printf("Unknow command try again\n");
   	printf("*==========================================*\n");
 	}
+  return 0;
 }
 
 
@@ -1084,7 +1745,7 @@ int main()
 	while(1)
 	{
 		printf(">>> ");
-		scanf("%s", a);
+		scanf("%38s", a);
 		if(strcmp(a, "calc") == 0)
 		{
 			calc();
@@ -1128,3 +1789,4 @@ int main()
 	}
     return 0;
 }
+
