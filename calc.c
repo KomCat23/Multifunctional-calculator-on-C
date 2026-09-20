@@ -23,7 +23,7 @@ int calc()
   scanf("%ld", &a);
   scanf("%ld", &b);
   char c[39];
-  scanf("%s", c);
+  scanf("%38s", c);
   if(strcmp(c, "+") == 0 || (strcmp(c, "sum") == 0) || (strcmp(c, "plus") == 0))
   {
   	if(a > 0 && b > 0)
@@ -47,7 +47,7 @@ int calc()
   	if(a > 0 && b > 0)
 		{
   		unsigned long f = a*b;
-      printf("%ld\n", f);
+      printf("%lu\n", f);
 		}
 		else
 		{
@@ -60,7 +60,7 @@ int calc()
   	if(a > 0 && b > 0)
 		{
   		unsigned long g = pow(a,b);
-      printf("%ld\n", g);
+      printf("%lu\n", g);
 		}
 		else
 		{
@@ -77,7 +77,7 @@ int calc()
 		}
 		else
 		{
-			printf("err\n");
+			printf("Error type help() for solve the proplem\n");
   	  return 1;
 		}
   }
@@ -90,7 +90,7 @@ int calc()
 		}
 		else
 		{
-			printf("err\n");
+			printf("Error type help() for solve the proplem\n");
   	  return 1;
 		}
   }
@@ -100,7 +100,7 @@ int calc()
   	double d = exp(b);
 		printf("%lf and %lf\n", f,d);	
 	}
-    else if(strcmp(c, "log") == 0)
+  else if(strcmp(c, "log") == 0)
   {
     if(a > 0 && b > 0)
     {
@@ -726,48 +726,99 @@ int calc()
 	}
 	else if(strcmp(c, "qdrt") == 0)        
   {
-    double f = sqrt(sqrt(a));
-    double g = sqrt(sqrt(b));
-    printf("%lf and %lf\n", f,g);
+    if(a >= 0 && b >= 0)
+    {
+      double f = sqrt(sqrt(a));
+      double g = sqrt(sqrt(b));
+      printf("%lf and %lf\n", f,g);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "qdrt+sum") == 0 || strcmp(c, "qdrt+plus") == 0)
   {
-    double f = sqrt(sqrt(a))+sqrt(sqrt(b));
-    printf("%lf\n", f);
+    if(a >= 0 && b >= 0)
+    {
+      double f = sqrt(sqrt(a))+sqrt(sqrt(b));
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "qdrt+min") == 0 || strcmp(c, "qdrt+minus") == 0)
   {
- 	  double f = sqrt(sqrt(a))-sqrt(sqrt(b));
-    printf("%lf\n", f);
+ 	  if(a >= 0 && b >= 0)
+    {
+      double f = sqrt(sqrt(a))-sqrt(sqrt(b));
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "qdrt+mul") == 0 || strcmp(c, "qdrt+multiple") == 0)
   {
- 	  double f = sqrt(sqrt(a))*sqrt(sqrt(b));
-    printf("%lf\n", f);
+ 	  if(a >= 0 && b >= 0)
+    {
+      double f = sqrt(sqrt(a))*sqrt(sqrt(b));
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "qdrt+div") == 0 || (strcmp(c, "qdrt+division") == 0))
   {
- 	  double f = sqrt(sqrt(a))/sqrt(sqrt(b));
-    printf("%lf\n", f);
+ 	  if(a >= 0 && b >= 0)
+    {
+      double f = sqrt(sqrt(a))/sqrt(sqrt(b));
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "qdrt+pow") == 0)
   {
- 	  double f = pow(sqrt(sqrt(a)),sqrt(sqrt(b)));
-    printf("%lf\n", f);
+    if(a >= 0 && b >= 0)
+    {
+      double f = pow(sqrt(sqrt(a)),sqrt(sqrt(b)));
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "qdrt+exp") == 0)
 	{
-	  double f = exp(sqrt(sqrt(a)));
-  	double d = exp(sqrt(sqrt(b)));
-		printf("%lf and %lf\n", f,d);	
+    if(a >= 0 && b >= 0)
+    {
+      double f = exp(sqrt(sqrt(a)));
+      double d = exp(sqrt(sqrt(b)));
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
 	}
   else
   {
-    printf("err\n");
+    printf("Error type help() for solve the proplem\n");
     return 1;
   }
   return 0;
 }
+
+
 
 int calcf()
 { 
@@ -781,14 +832,22 @@ int calcf()
   scanf("%lf", &a);
   double b;
   scanf("%lf", &b);
-  char c[99];
-  scanf("%s", c);
+  char c[39];
+  scanf("%38s", c);
   if(strcmp(c, "round") == 0)
   {
-    long f = round(a);
-    long g = round(b);
-    printf("%ld and %ld\n", f, g);
-
+    if(a >= 0 && b >= 0)
+    {
+      unsigned long f = round(a);
+      unsigned long g = round(b);
+      printf("%lu and %lu\n", f, g);
+    }
+    else
+    {
+      long f = round(a);
+      long g = round(b);
+      printf("%ld and %ld\n", f, g);
+    }
   }
   else if(strcmp(c, "+") == 0 || (strcmp(c, "sum") == 0) || (strcmp(c, "plus") == 0))
   {
@@ -819,7 +878,7 @@ int calcf()
 		}
 		else
 		{
-			printf("err\n");
+			printf("Error type help() for solve the proplem\n");
   	  return 1;
 		}
   }
@@ -1455,50 +1514,97 @@ int calcf()
 	}
 	else if(strcmp(c, "qdrt") == 0)        
   {
-    double f = sqrt(sqrt(a));
-    double g = sqrt(sqrt(b));
-    printf("%lf and %lf\n", f,g);
+    if(a >= 0 && b >= 0)
+    {
+      double f = sqrt(sqrt(a));
+      double g = sqrt(sqrt(b));
+      printf("%lf and %lf\n", f,g);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "qdrt+sum") == 0 || strcmp(c, "qdrt+plus") == 0)
   {
-    double f = sqrt(sqrt(a))+sqrt(sqrt(b));
-    printf("%lf\n", f);
+    if(a >= 0 && b >= 0)
+    {
+      double f = sqrt(sqrt(a))+sqrt(sqrt(b));
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "qdrt+min") == 0 || strcmp(c, "qdrt+minus") == 0)
   {
- 	  double f = sqrt(sqrt(a))-sqrt(sqrt(b));
-    printf("%lf\n", f);
+    if(a >= 0 && b >= 0)
+    {
+      double f = sqrt(sqrt(a))-sqrt(sqrt(b));
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "qdrt+mul") == 0 || strcmp(c, "qdrt+multiple") == 0)
   {
- 	  double f = sqrt(sqrt(a))*sqrt(sqrt(b));
-    printf("%lf\n", f);
+    if(a >= 0 && b >= 0)
+    {
+      double f = sqrt(sqrt(a))*sqrt(sqrt(b));
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "qdrt+div") == 0 || (strcmp(c, "qdrt+division") == 0))
   {
- 	  double f = sqrt(sqrt(a))/sqrt(sqrt(b));
-    printf("%lf\n", f);
+    if(a >= 0 && b >= 0)
+    {
+      double f = sqrt(sqrt(a))/sqrt(sqrt(b));
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "qdrt+pow") == 0)
   {
- 	  double f = pow(sqrt(sqrt(a)),sqrt(sqrt(b)));
-    printf("%lf\n", f);
+    if(a >= 0 && b >= 0)
+    {
+      double f = pow(sqrt(sqrt(a)),sqrt(sqrt(b)));
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
-    else if(strcmp(c, "qdrt+exp") == 0)
-	{
-	  double f = exp(sqrt(sqrt(a)));
-  	double d = exp(sqrt(sqrt(b)));
-		printf("%lf and %lf\n", f,d);	
-	}
+  else if(strcmp(c, "qdrt+exp") == 0)
+  {
+    if(a >= 0 && b >= 0)
+    {
+      double f = exp(sqrt(sqrt(a)));
+      double d = exp(sqrt(sqrt(b)));
+      printf("%lf and %lf\n", f,d); 
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
+  }
   else
   {
-    printf("err\n");
+    printf("Error type help() for solve the proplem\n");
     return 1;
   }
   return 0;
 }
-
-
 
 
 
@@ -1516,9 +1622,6 @@ int pi()
 
 
 
-
-
-
 int circle_calc()
 {
   printf("*==============================================================================================================================*\n");
@@ -1527,14 +1630,17 @@ int circle_calc()
   printf("2. If you want to search for a circle, just write the radius(cm) of the circle\n");
   printf("3. If you want to search for sector, just write the radius of the circle(cm) and the angle of the sector(in gradus of celcium)\n");
   printf("*=============================================================================================================================*\n");			
-  char a[99];
-  scanf("%s", a);
+  char a[39];
+  scanf("%38s", a);
   if(strcmp(a,"circle") == 0)
 	{
+    printf("*===================*\n");
+    printf("Type the radius\n");
+    printf("*===================*\n");
 		int R;
 		double pi = M_PI;
 		scanf("%d", &R);
-		if(R >= 0)
+		if(R > 0)
 	  {
 		  double C = 2*pi*R;
 		  double S = pi*R*R;
@@ -1545,7 +1651,6 @@ int circle_calc()
 	  {
       printf("Error type help() for solve the proplem\n");
   	} 
-		
 	}
 	else if(strcmp(a,"sector") == 0)
 	{
@@ -1553,14 +1658,14 @@ int circle_calc()
 		int n;
 		double pi = M_PI;
 		printf("*===========================*\n");
-		printf("Type the angle of sector: ");
+		printf("Type the angle of sector\n");
 		printf("*===========================*\n");
 		scanf("%d", &n);
 		printf("*===================*\n");
-		printf("Type the radius: ");
+		printf("Type the radius\n");
 		printf("*===================*\n");
 		scanf("%d", &R);
-		if(R >= 0 && n >= 0)
+		if(R > 0 && n > 0)
 	  {
 		  double C = 2*pi*R;
 		  double S = pi*R*R;
@@ -1579,8 +1684,6 @@ int circle_calc()
 
 
 
-
-
 int sphere_calc()
 {
 	printf("*=============================================*\n");
@@ -1590,7 +1693,7 @@ int sphere_calc()
 	int R;
 	double pi = M_PI;
 	scanf("%d", &R);
-	if(R >= 0)
+	if(R > 0)
 	{
 		double S = 4*pi*R*R;
 	  double V = 4.0/3.0*pi*R*R*R;
@@ -1603,7 +1706,6 @@ int sphere_calc()
 	}
 	return 0;
 }
-
 
 
 
@@ -1628,19 +1730,23 @@ int clear()
 
 
 
-
 int radian_calc()
 {
 	printf("Write the angle in gradus of celcium: ");
 	double gradus;
 	double pi = M_PI;
 	scanf("%lf", &gradus);
-	double radian = gradus*pi/180.0;
-	printf("%.1lf Gradus = %.4lf radiands\n", gradus, radian);
+  if(gradus >= 0)
+  {
+    double radian = gradus*pi/180.0;
+    printf("%.1lf Gradus = %.4lf radiands\n", gradus, radian);
+  }
+  else
+  {
+    printf("Error type help() for solve the proplem\n");
+  }
 	return 0;
 }
-
-
 
 
 
@@ -1648,7 +1754,7 @@ int help()
 {
 	printf("Write the command which you need a help: ");
 	char a[39];
-	scanf("%s", a);
+	scanf("%38s", a);
 	if(strcmp(a, "calc") == 0)
 	{
     printf("*==========================================*\n");
@@ -1657,7 +1763,7 @@ int help()
     printf("1. Dont try to enter floats(the compiler will make them integers)\n");
     printf("2. When dividing do not put 0 as the second number(there will be an error)\n");
     printf("3. When taking the root of a number dont try to make it negative(there will be an error)\n");
-    printf("4. When calculating the logarithm of a number do not try to make it negative or do not write the 0(there will be an error)\n");
+    printf("4. When calculating the logarithm of a number do not try to make it negative or write the 0(there will be an error)\n");
     printf("*==========================================*\n");
 	}
 	else if(strcmp(a, "calcf") == 0)
@@ -1668,7 +1774,7 @@ int help()
 	  printf("1. Dont try to enter integers(the compiler will make them floats)\n");
 	  printf("2. When dividing do not put 0 as the second number(there will be an error)\n");
 	  printf("3. When taking the root of a number dont try to make it negative(there will be an error)\n");
-	  printf("4. When calculating the logarithm of a number do not try to make it negative or do not write the 0(there will be an error)\n");
+	  printf("4. When calculating the logarithm of a number do not try to make it negative or write the 0(there will be an error)\n");
 	  printf("*==========================================*\n");
 	}
 	else if(strcmp(a, "pi") == 0)
@@ -1683,15 +1789,15 @@ int help()
   	printf("*==========================================*\n");
   	printf("circle_calc() - the calculator for calculating the area/circumreference of a circle or just its sector\n");
   	printf("Here are some rules of use\n");
-  	printf("1. Do not try to enter negative radius values(there will be an error)\n");
-  	printf("2. Do not try to enter negative angle values(there will be an error)\n");
+  	printf("1. Do not try to enter negative radius values or 0(there will be an error)\n");
+  	printf("2. Do not try to enter negative angle values or 0(there will be an error)\n");
   	printf("*==========================================*\n");
 	}
 	else if(strcmp(a, "sphere_calc") == 0)
 	{
   	printf("*==========================================*\n");
   	printf("sphere_calc() - the calculator for calculating sphere\n");
-  	printf("The most important rule: do not try to enter negative radius values(there will be an error)\n");
+  	printf("The most important rule: do not try to enter negative radius values or write 0(there will be an error)\n");
   	printf("*==========================================*\n");
 	}
 	else if(strcmp(a, "clear") == 0)
@@ -1703,10 +1809,9 @@ int help()
 	else if(strcmp(a, "radian_calc") == 0)
 	{
   	printf("*==========================================*\n");
-  	printf("radian_calc() - the calculator for to calculate the radian of an angle");
+  	printf("radian_calc() - the calculator for to calculate the radian of an angle\n");
   	printf("The most important rule: do not try to enter negative angle values(there will be an error)\n");
   	printf("*==========================================*\n");
-	  
 	}
 	else if(strcmp(a, "exit") == 0)
 	{
@@ -1787,6 +1892,5 @@ int main()
 			printf("Unknown command\n");
 		}
 	}
-    return 0;
+  return 0;
 }
-
