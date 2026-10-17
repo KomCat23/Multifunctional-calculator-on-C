@@ -710,8 +710,15 @@ int calc()
   }
   else if(strcmp(c, "cbrt+div") == 0 || strcmp(c, "cbrt+division") == 0)
   {
-    double f = cbrt(a)/cbrt(b);
-    printf("%lf\n", f);
+    if(b>0)
+    {
+      double f = cbrt(a)/cbrt(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "cbrt+pow") == 0)
   {
@@ -775,7 +782,7 @@ int calc()
   }
   else if(strcmp(c, "qdrt+div") == 0 || (strcmp(c, "qdrt+division") == 0))
   {
- 	  if(a >= 0 && b >= 0)
+ 	  if(a >= 0 && b > 0)
     {
       double f = sqrt(sqrt(a))/sqrt(sqrt(b));
       printf("%lf\n", f);
@@ -1440,7 +1447,7 @@ int calcf()
   }
   else if(strcmp(c, "sqrt+div") == 0 || (strcmp(c, "sqrt+division") == 0))
   {
- 	  if(a >= 0 && b >= 0)
+ 	  if(a >= 0 && b > 0)
     {
       double f = sqrt(a)/sqrt(b);
       printf("%lf\n", f);
@@ -1498,8 +1505,15 @@ int calcf()
   }
   else if(strcmp(c, "cbrt+div") == 0 || strcmp(c, "cbrt+division") == 0)
   {
-    double f = cbrt(a)/cbrt(b);
-    printf("%lf\n", f);
+    if(b>0)
+    {
+      double f = cbrt(a)/cbrt(b);
+      printf("%lf\n", f);
+    }
+    else
+    {
+      printf("Error type help() for solve the proplem\n");
+    }
   }
   else if(strcmp(c, "cbrt+pow") == 0)
   {
@@ -1563,7 +1577,7 @@ int calcf()
   }
   else if(strcmp(c, "qdrt+div") == 0 || (strcmp(c, "qdrt+division") == 0))
   {
-    if(a >= 0 && b >= 0)
+    if(a >= 0 && b > 0)
     {
       double f = sqrt(sqrt(a))/sqrt(sqrt(b));
       printf("%lf\n", f);
@@ -1733,17 +1747,34 @@ int clear()
 int radian_calc()
 {
 	printf("Write the angle in gradus of celcium: ");
-	double gradus;
+	int gradus;
 	double pi = M_PI;
-	scanf("%lf", &gradus);
-  if(gradus >= 0)
+	scanf("%d", &gradus);
+  if(gradus<0)
   {
-    double radian = gradus*pi/180.0;
+    double radian = fabs(gradus) * (M_PI/180.0);
+    double b = sin(radian);
+    double c = cos(radian);
+    double d = tan(radian);
+    double e = 1/tan(radian);  
     printf("%.1lf Gradus = %.4lf radiands\n", gradus, radian);
+    printf("%lf\n", b);
+    printf("%lf\n", c);
+    printf("%lf\n", d);
+    printf("%lf\n", e);
   }
   else
   {
-    printf("Error type help() for solve the proplem\n");
+    double radian = gradus * (M_PI/180.0);
+    double b = sin(radian);
+    double c = cos(radian);
+    double d = tan(radian);
+    double e = 1/tan(radian);
+    printf("%.1lf Gradus = %.4lf radiands\n", gradus, radian);
+    printf("%lf\n", b);
+    printf("%lf\n", c);
+    printf("%lf\n", d);
+    printf("%lf\n", e);
   }
 	return 0;
 }
